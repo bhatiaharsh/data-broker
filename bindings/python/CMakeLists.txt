@@ -45,7 +45,7 @@ if (PYTHON)
                    COMMAND ${CMAKE_COMMAND} -E touch ${OUTPUT}
                    DEPENDS ${DEPS})
 
-    set( INSTALL_CMD "${PYTHON} ${CMAKE_CURRENT_BINARY_DIR}/${SETUP_PY} install --prefix ${CMAKE_INSTALL_PREFIX}")
+    set( INSTALL_CMD "${PYTHON} ${CMAKE_CURRENT_BINARY_DIR}/${SETUP_PY} install --prefix ${CMAKE_INSTALL_PREFIX} --single-version-externally-managed --root=/")
    
 	add_custom_target(pydbr ALL DEPENDS ${OUTPUT})
 	FILE(COPY examples DESTINATION .)

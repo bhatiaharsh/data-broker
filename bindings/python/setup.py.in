@@ -23,6 +23,7 @@ setup(name='PyDBR',
       author_email='c.misale@ibm.com',
       packages=['dbr_module'],
       cffi_modules=["dbr_module/dbr_interface.py:ffibuilder","dbr_module/errorcodes.py:ffibuilder"],	
+      zip_safe = False,
       package_data={
         # If any package contains *.txt files, include them:
         '': ['*.so','*.c','*.o'],

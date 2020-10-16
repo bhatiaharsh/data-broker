@@ -24,5 +24,8 @@ add_executable( fship_srv ${FSHIP_SRV_SOURCE} )
 add_dependencies( fship_srv libevent_pthreads libevent )
 target_link_libraries( fship_srv PRIVATE ${DATABROKER_LIB} ${TRANSPORT_LIBS} ${libevent_pthreads_LIBRARY} ${libevent_LIBRARY} pthread )
 
+# added by Harsh (2020.10.15)
+include_directories(${LIBEVENT_INCLUDE_DIR})
+
 install(TARGETS fship_srv RUNTIME
 	    DESTINATION bin )

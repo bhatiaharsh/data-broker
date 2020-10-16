@@ -42,6 +42,9 @@ add_dependencies(dbbe_redis ${TRANSPORT_LIBS})
 target_link_libraries(dbbe_redis PRIVATE ${TRANSPORT_LIBS} ${libevent_LIBRARY} )
 #target_include_directories(dbbe_redis PRIVATE ${LIBEVENT_INCLUDE_DIR})
 
+# added by Harsh (2020.10.15)
+include_directories(${LIBEVENT_INCLUDE_DIR})
+
 install( TARGETS dbbe_redis
 	LIBRARY
 	DESTINATION lib
